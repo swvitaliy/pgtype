@@ -256,77 +256,8 @@ func newConnInfo() *ConnInfo {
 func NewConnInfo() *ConnInfo {
 	ci := newConnInfo()
 
-	ci.RegisterDataType(DataType{Value: &ACLItemArray{}, Name: "_aclitem", OID: ACLItemArrayOID})
-	ci.RegisterDataType(DataType{Value: &BoolArray{}, Name: "_bool", OID: BoolArrayOID})
-	ci.RegisterDataType(DataType{Value: &BPCharArray{}, Name: "_bpchar", OID: BPCharArrayOID})
-	ci.RegisterDataType(DataType{Value: &ByteaArray{}, Name: "_bytea", OID: ByteaArrayOID})
-	ci.RegisterDataType(DataType{Value: &CIDRArray{}, Name: "_cidr", OID: CIDRArrayOID})
-	ci.RegisterDataType(DataType{Value: &DateArray{}, Name: "_date", OID: DateArrayOID})
-	ci.RegisterDataType(DataType{Value: &Float4Array{}, Name: "_float4", OID: Float4ArrayOID})
-	ci.RegisterDataType(DataType{Value: &Float8Array{}, Name: "_float8", OID: Float8ArrayOID})
-	ci.RegisterDataType(DataType{Value: &InetArray{}, Name: "_inet", OID: InetArrayOID})
-	ci.RegisterDataType(DataType{Value: &Int2Array{}, Name: "_int2", OID: Int2ArrayOID})
-	ci.RegisterDataType(DataType{Value: &Int4Array{}, Name: "_int4", OID: Int4ArrayOID})
-	ci.RegisterDataType(DataType{Value: &Int8Array{}, Name: "_int8", OID: Int8ArrayOID})
-	ci.RegisterDataType(DataType{Value: &NumericArray{}, Name: "_numeric", OID: NumericArrayOID})
-	ci.RegisterDataType(DataType{Value: &TextArray{}, Name: "_text", OID: TextArrayOID})
-	ci.RegisterDataType(DataType{Value: &TimestampArray{}, Name: "_timestamp", OID: TimestampArrayOID})
-	ci.RegisterDataType(DataType{Value: &TimestamptzArray{}, Name: "_timestamptz", OID: TimestamptzArrayOID})
-	ci.RegisterDataType(DataType{Value: &UUIDArray{}, Name: "_uuid", OID: UUIDArrayOID})
-	ci.RegisterDataType(DataType{Value: &VarcharArray{}, Name: "_varchar", OID: VarcharArrayOID})
-	ci.RegisterDataType(DataType{Value: &ACLItem{}, Name: "aclitem", OID: ACLItemOID})
-	ci.RegisterDataType(DataType{Value: &Bit{}, Name: "bit", OID: BitOID})
-	ci.RegisterDataType(DataType{Value: &Bool{}, Name: "bool", OID: BoolOID})
-	ci.RegisterDataType(DataType{Value: &Box{}, Name: "box", OID: BoxOID})
-	ci.RegisterDataType(DataType{Value: &BPChar{}, Name: "bpchar", OID: BPCharOID})
-	ci.RegisterDataType(DataType{Value: &Bytea{}, Name: "bytea", OID: ByteaOID})
-	ci.RegisterDataType(DataType{Value: &QChar{}, Name: "char", OID: QCharOID})
-	ci.RegisterDataType(DataType{Value: &CID{}, Name: "cid", OID: CIDOID})
-	ci.RegisterDataType(DataType{Value: &CIDR{}, Name: "cidr", OID: CIDROID})
-	ci.RegisterDataType(DataType{Value: &Circle{}, Name: "circle", OID: CircleOID})
-	ci.RegisterDataType(DataType{Value: &Date{}, Name: "date", OID: DateOID})
-	ci.RegisterDataType(DataType{Value: &Daterange{}, Name: "daterange", OID: DaterangeOID})
-	ci.RegisterDataType(DataType{Value: &Float4{}, Name: "float4", OID: Float4OID})
-	ci.RegisterDataType(DataType{Value: &Float8{}, Name: "float8", OID: Float8OID})
-	ci.RegisterDataType(DataType{Value: &Inet{}, Name: "inet", OID: InetOID})
-	ci.RegisterDataType(DataType{Value: &Int2{}, Name: "int2", OID: Int2OID})
-	ci.RegisterDataType(DataType{Value: &Int4{}, Name: "int4", OID: Int4OID})
-	ci.RegisterDataType(DataType{Value: &Int4range{}, Name: "int4range", OID: Int4rangeOID})
-	ci.RegisterDataType(DataType{Value: &Int4multirange{}, Name: "int4multirange", OID: Int4multirangeOID})
-	ci.RegisterDataType(DataType{Value: &Int8{}, Name: "int8", OID: Int8OID})
-	ci.RegisterDataType(DataType{Value: &Int8range{}, Name: "int8range", OID: Int8rangeOID})
-	ci.RegisterDataType(DataType{Value: &Int8multirange{}, Name: "int8multirange", OID: Int8multirangeOID})
-	ci.RegisterDataType(DataType{Value: &Interval{}, Name: "interval", OID: IntervalOID})
 	ci.RegisterDataType(DataType{Value: &JSON{}, Name: "json", OID: JSONOID})
-	ci.RegisterDataType(DataType{Value: &JSONArray{}, Name: "_json", OID: JSONArrayOID})
 	ci.RegisterDataType(DataType{Value: &JSONB{}, Name: "jsonb", OID: JSONBOID})
-	ci.RegisterDataType(DataType{Value: &JSONBArray{}, Name: "_jsonb", OID: JSONBArrayOID})
-	ci.RegisterDataType(DataType{Value: &Line{}, Name: "line", OID: LineOID})
-	ci.RegisterDataType(DataType{Value: &Lseg{}, Name: "lseg", OID: LsegOID})
-	ci.RegisterDataType(DataType{Value: &Macaddr{}, Name: "macaddr", OID: MacaddrOID})
-	ci.RegisterDataType(DataType{Value: &Name{}, Name: "name", OID: NameOID})
-	ci.RegisterDataType(DataType{Value: &Numeric{}, Name: "numeric", OID: NumericOID})
-	ci.RegisterDataType(DataType{Value: &Numrange{}, Name: "numrange", OID: NumrangeOID})
-	ci.RegisterDataType(DataType{Value: &Nummultirange{}, Name: "nummultirange", OID: NummultirangeOID})
-	ci.RegisterDataType(DataType{Value: &OIDValue{}, Name: "oid", OID: OIDOID})
-	ci.RegisterDataType(DataType{Value: &Path{}, Name: "path", OID: PathOID})
-	ci.RegisterDataType(DataType{Value: &Point{}, Name: "point", OID: PointOID})
-	ci.RegisterDataType(DataType{Value: &Polygon{}, Name: "polygon", OID: PolygonOID})
-	ci.RegisterDataType(DataType{Value: &Record{}, Name: "record", OID: RecordOID})
-	ci.RegisterDataType(DataType{Value: &Text{}, Name: "text", OID: TextOID})
-	ci.RegisterDataType(DataType{Value: &TID{}, Name: "tid", OID: TIDOID})
-	ci.RegisterDataType(DataType{Value: &Time{}, Name: "time", OID: TimeOID})
-	ci.RegisterDataType(DataType{Value: &Timestamp{}, Name: "timestamp", OID: TimestampOID})
-	ci.RegisterDataType(DataType{Value: &Timestamptz{}, Name: "timestamptz", OID: TimestamptzOID})
-	ci.RegisterDataType(DataType{Value: &Tsrange{}, Name: "tsrange", OID: TsrangeOID})
-	ci.RegisterDataType(DataType{Value: &TsrangeArray{}, Name: "_tsrange", OID: TsrangeArrayOID})
-	ci.RegisterDataType(DataType{Value: &Tstzrange{}, Name: "tstzrange", OID: TstzrangeOID})
-	ci.RegisterDataType(DataType{Value: &TstzrangeArray{}, Name: "_tstzrange", OID: TstzrangeArrayOID})
-	ci.RegisterDataType(DataType{Value: &Unknown{}, Name: "unknown", OID: UnknownOID})
-	ci.RegisterDataType(DataType{Value: &UUID{}, Name: "uuid", OID: UUIDOID})
-	ci.RegisterDataType(DataType{Value: &Varbit{}, Name: "varbit", OID: VarbitOID})
-	ci.RegisterDataType(DataType{Value: &Varchar{}, Name: "varchar", OID: VarcharOID})
-	ci.RegisterDataType(DataType{Value: &XID{}, Name: "xid", OID: XIDOID})
 
 	registerDefaultPgTypeVariants := func(name, arrayName string, value interface{}) {
 		ci.RegisterDefaultPgType(value, name)
@@ -925,77 +856,7 @@ var nameValues map[string]Value
 
 func init() {
 	nameValues = map[string]Value{
-		"_aclitem":       &ACLItemArray{},
-		"_bool":          &BoolArray{},
-		"_bpchar":        &BPCharArray{},
-		"_bytea":         &ByteaArray{},
-		"_cidr":          &CIDRArray{},
-		"_date":          &DateArray{},
-		"_float4":        &Float4Array{},
-		"_float8":        &Float8Array{},
-		"_inet":          &InetArray{},
-		"_int2":          &Int2Array{},
-		"_int4":          &Int4Array{},
-		"_int8":          &Int8Array{},
-		"_numeric":       &NumericArray{},
-		"_text":          &TextArray{},
-		"_timestamp":     &TimestampArray{},
-		"_timestamptz":   &TimestamptzArray{},
-		"_uuid":          &UUIDArray{},
-		"_varchar":       &VarcharArray{},
-		"_json":          &JSONArray{},
-		"_jsonb":         &JSONBArray{},
-		"aclitem":        &ACLItem{},
-		"bit":            &Bit{},
-		"bool":           &Bool{},
-		"box":            &Box{},
-		"bpchar":         &BPChar{},
-		"bytea":          &Bytea{},
-		"char":           &QChar{},
-		"cid":            &CID{},
-		"cidr":           &CIDR{},
-		"circle":         &Circle{},
-		"date":           &Date{},
-		"daterange":      &Daterange{},
-		"float4":         &Float4{},
-		"float8":         &Float8{},
-		"hstore":         &Hstore{},
-		"inet":           &Inet{},
-		"int2":           &Int2{},
-		"int4":           &Int4{},
-		"int4range":      &Int4range{},
-		"int4multirange": &Int4multirange{},
-		"int8":           &Int8{},
-		"int8range":      &Int8range{},
-		"int8multirange": &Int8multirange{},
-		"interval":       &Interval{},
-		"json":           &JSON{},
-		"jsonb":          &JSONB{},
-		"line":           &Line{},
-		"lseg":           &Lseg{},
-		"ltree":          &Ltree{},
-		"macaddr":        &Macaddr{},
-		"name":           &Name{},
-		"numeric":        &Numeric{},
-		"numrange":       &Numrange{},
-		"nummultirange":  &Nummultirange{},
-		"oid":            &OIDValue{},
-		"path":           &Path{},
-		"point":          &Point{},
-		"polygon":        &Polygon{},
-		"record":         &Record{},
-		"text":           &Text{},
-		"tid":            &TID{},
-		"timestamp":      &Timestamp{},
-		"timestamptz":    &Timestamptz{},
-		"tsrange":        &Tsrange{},
-		"_tsrange":       &TsrangeArray{},
-		"tstzrange":      &Tstzrange{},
-		"_tstzrange":     &TstzrangeArray{},
-		"unknown":        &Unknown{},
-		"uuid":           &UUID{},
-		"varbit":         &Varbit{},
-		"varchar":        &Varchar{},
-		"xid":            &XID{},
+		"json":  &JSON{},
+		"jsonb": &JSONB{},
 	}
 }

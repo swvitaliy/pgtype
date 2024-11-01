@@ -9,8 +9,8 @@ import (
 	"testing"
 
 	"github.com/jackc/pgtype"
-	"github.com/jackc/pgx/v4"
-	_ "github.com/jackc/pgx/v4/stdlib"
+	"github.com/jackc/pgx/v5"
+	_ "github.com/jackc/pgx/v5/stdlib"
 	_ "github.com/lib/pq"
 )
 
